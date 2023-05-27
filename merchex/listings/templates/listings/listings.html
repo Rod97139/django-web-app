@@ -7,8 +7,9 @@
 
 <ul>
     {% for listing in listings %}
-     <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a></li>
+     <li><a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a>
+     - <a href="{% url 'listing-update' listing.id %}">[modifier]</a></li>
     {% endfor %}
 </ul>
-
+<a href="{% url 'listing-create' %}">Créer une nouvelle annonce</a>
 {% endblock %}

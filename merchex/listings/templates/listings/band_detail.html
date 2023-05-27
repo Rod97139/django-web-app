@@ -19,6 +19,8 @@
 {% for listing in band.listing_set.all %}
 <p><a href="{% url 'listing-detail' listing.id  %}">{{listing.title}}</a></p> 
 {% endfor %}
+<a href="{% url 'band-update' band.id %}">Modifier ce groupe</a>
+
 <a href="{% url 'band-list' %}">Retour à tous les groupes</a>
 
 
